@@ -1,0 +1,52 @@
+.souvenir{
+    width:auto;
+    display: flex; 
+}
+.images{
+margin: 5px;
+}
+text p{
+    margin: 5px 5px 5px 5px;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.gallerie{
+    width: 300px;
+}
+.gallerie1{
+    width: 298px;
+}
+.gallerie2{
+    width: 280px;
+    height: 200px;
+    margin: 5px;
+}
+.gallerie:hover{
+    transform: scaleY(0.95);
+    transition: 0.5s;
+}.gallerie1:hover{
+    transform: scaleY(0.95);
+    transition: 0.5s;
+}.gallerie2:hover{
+    transform: scaleY(0.95);
+    transition: 0.5s;
+}
+@media (max-width:800px) {
+    .souvenir{
+        width:auto;
+        display: flex;   
+    } 
+    .images{
+        margin: 5px;
+    }
+    .gallerie{
+        width: 150px;
+    }
+    .gallerie1{
+        width: 145px;
+    }
+    .gallerie2{
+        width: 143px;
+        height: 98px;
+    }
+}
