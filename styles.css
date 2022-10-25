@@ -283,6 +283,7 @@ header .navbar .menu-deroulant:hover > .sous-menu {
 .nous{
     text-align: center;
     font-size: 2rem;
+    text-decoration: underline;
 }
 .qui{
 display: flex;
@@ -320,8 +321,9 @@ animation: glisses 7s 1;
 }
 /* media query */
 @media screen and (max-width: 1120px) {
-.nous{
-    font-size: 15px;
+.nous h1{
+    font-size: 2rem;
+    font-weight: bold;
 }
 .qui{
 
@@ -362,7 +364,7 @@ animation: glisses 7s 1;
 .menu .contenu{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     margin-top: 40px;
     width: 100vw;
 }
@@ -393,12 +395,17 @@ animation: glisses 7s 1;
     height: 100%;
     background-color: none;
 }
+.titre{
+     box-shadow: 10px rgba(0,0,0, 0.1);
+}
+
 .titre h1{
     text-align: right;
     text-decoration: underline;
     margin-right: 15%;
     font-size: 2rem;
 }
+
 @media (min-width:800px) {
     .titre h1 br{
         display: none;
