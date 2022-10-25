@@ -15,6 +15,7 @@ header{
     position: fixed;
     top: 0%;
     left: 0%;
+    padding: 0 10px;
     padding-top: 5px;
     width: 100%;
     z-index: 1;
@@ -25,7 +26,6 @@ header{
     background-color: #fff;
 }
 header.sticky{
-    background: #fff;
     box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
 }
 .deca{
@@ -109,6 +109,11 @@ header .navbar .sous-menu > li > a {
 header .navbar .menu-deroulant:hover > .sous-menu {
     animation: apparitionSousMenu 0.3s forwards;
   }
+  @media (max-width:900px) {
+  header .navbar .menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 0.1s forwards;
+  }
+}
   @keyframes apparitionSousMenu {
     0% {
       border-top: 3px solid #2169EC;
@@ -141,7 +146,15 @@ header .navbar .menu-deroulant:hover > .sous-menu {
         margin-left: 0px;
     }
     header{
-        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        height: 55px;
+        background-color: #000;
+        /* background: transparent; */
+    }
+    header.sticky::before{
+        background-color: #000;
+        padding: 0;
     }
     header .navbar li a {
         text-decoration: none;
@@ -193,7 +206,7 @@ header .navbar .menu-deroulant:hover > .sous-menu {
     }
     
     header.sticky .menuToggle{
-        filter: invert(1);
+        filter:invert(1);
     }
 
 }
@@ -272,12 +285,16 @@ header .navbar .menu-deroulant:hover > .sous-menu {
     font-size: 2rem;
 }
 .qui{
-    width: 51%;
+display: flex;
+}
+.nou{
+    width: 40%;
     border: 1px solid rgb(10, 10, 10);
     border-radius: 10%;
-    margin-left: 200px;
+    background: #000;
+    margin-left: 100px;
+    margin-right: 10px;
     margin-bottom: 30px;
-    background:#000 ;
 }
 .qui{
 animation: glisses 7s 1;
@@ -307,11 +324,17 @@ animation: glisses 7s 1;
     font-size: 15px;
 }
 .qui{
-    width: 51%;
+
+    display: flex;
+}
+.nou{
+    width: 50%;
     border: 1px solid rgb(10, 10, 10);
     border-radius: 10%;
-    margin-left: 100px;
+    margin-left: 6px;
+    margin-right: 5px;
     margin-bottom: 10px;
+    background: #000;
 }
 .qui p{
     font-size: 0.8rem;
@@ -330,8 +353,10 @@ animation: glisses 7s 1;
 /* nos projets */
 
 .menu{
-    margin-top: -200px;
+    width: 100vw;
     border-radius: 20%;
+    margin-top: 10px;
+    display: flex;
 }
 
 .menu .contenu{
@@ -339,7 +364,7 @@ animation: glisses 7s 1;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 40px;
-    width: 1350px;
+    width: 100vw;
 }
 .menu .contenu .boite{
     width: 340px;
@@ -368,14 +393,14 @@ animation: glisses 7s 1;
     height: 100%;
     background-color: none;
 }
-.imbox h1{
+.titre h1{
     text-align: right;
     text-decoration: underline;
-    margin-bottom: 5px;
+    margin-right: 15%;
     font-size: 2rem;
 }
 @media (min-width:800px) {
-    .imbox h1 br{
+    .titre h1 br{
         display: none;
     }
 }
@@ -388,7 +413,7 @@ animation: glisses 7s 1;
     text-decoration: 3px underline;
 }
 .imbox p{
-    font-size: 1rem;
+    font-size: 1.2rem;
 } 
 .boite .imbox h5,
 .boite .imbox img{
@@ -535,6 +560,9 @@ animation: glisses 7s 1;
 
 /* slides */
 /* voir plus */
+.voir{
+    text-align: center;
+}
 .btn1{
     font-size: 1em;
     color: #fff;
@@ -807,7 +835,6 @@ margin-top: 5px;
 
 /* footer */
 .copyright{
-    padding: 20px 40px;
     border-top: 2px solid rgba(0,0,0, 0.1);
     background: rgba(228,222,222,);
     text-align: center;
@@ -966,7 +993,7 @@ div .img-area{
 
 
 /* autre */
-.cont{
+/* .cont{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -976,7 +1003,6 @@ div .img-area{
 .cont::before{
     content: '';
     position: absolute;
-    /* top: 0; */
     left: 0;
     width: 50%;
     height: 100%;
@@ -988,7 +1014,6 @@ div .img-area{
     min-height:550px;
     display: flex;
     z-index: 1000;
-    /* background: #fff; */
 }
 .container .contactInfo{
     position: absolute;
@@ -1132,6 +1157,7 @@ div .img-area{
     background: #0d948b;
 }
 /* responsive */
+/*
 @media (max-width:1200px) {
     .container{
     width: 90%;
@@ -1192,6 +1218,116 @@ div .img-area{
 .container .contactForm .formBox .inputBox.w50{
     width: 100%;
 }
+} */
+/* autre */
+.section1{
+    margin-top: 30px;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20%;
+    text-align: center;
+}
+@media (max-width:800px) {
+    .section1{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.section1 h1,
+.section1 li,
+.section1 ul{
+    text-align: center;
+}
+.section1 h1{
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.section1 li{
+    list-style-type: none;
+}
+.section1 h2{
+    /* border-top: 1px solid #fb911f; */
+    border-bottom: 1px solid #fb911f;
+    text-decoration: underline;
+}
+.section1 .point p{
+    display: none;
+}
+@media (max-width:800px) {
+    .section1 .point p{
+        display:flex;
+        width: 100vw;
+        font-weight: 900;
+        font-size: 20px;
+        margin-left: 0;
+    }   
+}
+.section1 .gauche{
+    float: left;
+}
+.section1 .droit{
+    float: right;
+}
+.section1 .rejoignez{
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+@media (max-width:900px) {
+    .section1 .rejoignez{
+        text-align: center;
+    }
+}
+.section1 .rejoignez h1{
+    font-size: 20px;
+    text-align: right;
+}
+@media (max-width:900px) {
+.section1 .rejoignez h1{
+    font-size: 20px;
+    text-align: center;
+}
+}
+.rejoignez input{
+    align-items: center;
+    /* background: #fff; */
+}
+.section1 .rejoignez h1{
+    color: #fb911f;
+}
+.section1 .rejoignez input:focus ~ span,
+.section1 .rejoignez input:valid ~ span,
+.section1 .rejoignez textarea:focus ~ span,
+.section1 .rejoignez textarea:valid ~ span{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #095a55;
+    font-weight: 500;
+}
+.section1 .rejoignez input[ type="submit"]{
+        position: relative;
+        cursor: pointer;
+        background: #fb911f;
+        color: #fff;
+        border: none;
+        max-width: 150px;
+        padding: 12px;
+}
+.section1 .rejoignez input{
+    width: 50%;
+    resize: none;
+    /* outline: 1px; */
+    margin-bottom: 10px;
+    /* border: 1px;  */
+}
+.section1 .rejoignez textarea{
+    width: 50%;
+    /* border: 1px;
+    outline: 1px; */
 }
 
 
@@ -1219,4 +1355,19 @@ div .img-area{
 
 
 
-/* autre */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
