@@ -1255,6 +1255,9 @@ div .img-area{
 .section1 .point p{
     display: none;
 }
+.section1 a{
+    color: #333;
+}
 @media (max-width:800px) {
     .section1 .point p{
         display:flex;
